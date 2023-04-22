@@ -5,7 +5,6 @@ runtime-version: "22.08"
 command: safeeyes-run
 
 finish-args:
-  - "--share=network"
   - "--share=ipc"
   - "--socket=x11"
   - "--socket=wayland"
