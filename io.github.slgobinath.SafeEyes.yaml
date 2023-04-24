@@ -10,6 +10,7 @@ finish-args:
   - "--socket=wayland"
   - "--socket=pulseaudio"
   - "--device=dri"
+  - "--filesystem=xdg-config/gtk-3.0:ro" # system theme integration
   - "--system-talk-name=org.freedesktop.StatusNotifierItem.Menu" # for tray icon
   - "--talk-name=org.mpris.MediaPlayer2.*" # to be able to pause media player on break
   # various DE support
@@ -19,7 +20,7 @@ finish-args:
   - "--talk-name=org.gnome.Mutter.IdleMonitor"
   - "--talk-name=org.kde.StatusNotifierWatcher"
 
-cleanup: # Cleanup after the python modules
+cleanup:
   - /cache
   - /man
   - /share/aclocal
@@ -36,60 +37,26 @@ modules:
   - shared-modules/libappindicator/libappindicator-gtk3-12.10.json
 
   # auto generated pip dependencies for safeeyes
-  # install pycairo first or build fails
-  # install order is: pycairo -> setuptools-scm -> safeeyes
-  # `python3 flatpak-pip-generator.py  --runtime='org.freedesktop.Sdk//22.08' PKGNAME`
-  - pypi-dependencies.json
+  # install pycairo first or build fails (order is: pycairo -> safeeyes)
+  # `python flatpak-pip-generator.py  --runtime='org.freedesktop.Sdk//22.08' PKGNAME`
+  - modules/pypi-dependencies.json
+  - modules/dbus-python.yml # dbus - for tray
+  - modules/xprop.yml # required for 'xorg do not disturb' plugin
+  - modules/wlrctl.yml # required for 'wayland do not disturb' plugin (x86_64 only)
+  - modules/alsa-utils.yml # required for 'audible alert' plugin
+  - modules/libnotify.yml # notification support
+  - modules/xprintidle.yml # idle detection other than gnome
 
-  - name: dbus-python # dbus - for tray
-    buildsystem: autotools
-    sources:
-      - type: archive
-        url: "https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.3.2.tar.gz"
-        sha256: ad67819308618b5069537be237f8e68ca1c7fcc95ee4a121fe6845b1418248f8
-
-  - name: wlrctl # required for 'wayland do not disturb' plugin (64b only)
-    buildsystem: meson
-    sources:
-      - type: archive
-        url: "https://git.sr.ht/~brocellous/wlrctl/archive/v0.2.1.tar.gz"
-        sha256: de8848de0a81749fe7ee7316bead0261bd978e26c2f899d02897609972a6e98c
-    only-arches:
-      - x86_64
-
-  - name: alsa-utils # required for 'audible alert' plugin
-    buildsystem: autotools
-    config-opts:
-      - "--with-udev-rules-dir=/app/null"
-    sources:
-      - type: archive
-        url: "https://www.alsa-project.org/files/pub/utils/alsa-utils-1.2.8.tar.bz2"
-        sha256: e140fa604c351f36bd72167c8860c69d81b964ae6ab53992d6434dde38e9333c
-
-  - name: libnotify # notification support
-    buildsystem: meson
-    config-opts:
-      - "-Dman=false"
-      - "-Dtests=false"
-      - "-Dgtk_doc=false"
-      - "-Ddocbook_docs=disabled"
-    sources:
-      - type: archive
-        url: "https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.2.tar.xz"
-        sha256: c5f4ed3d1f86e5b118c76415aacb861873ed3e6f0c6b3181b828cf584fc5c616
-        x-checker-data:
-          project-id: 13149
-          type: anitya
-          url-template: https://download.gnome.org/sources/libnotify/$major.$minor/libnotify-$version.tar.xz
-
-  - name: safeeyes # shortcut
+  - name: safeeyes
     buildsystem: simple
     build-commands:
+      - cp -r /app/lib/python3.10/site-packages/safeeyes/platform/icons/ /app/share/icons/
+      # - find /app/share/icons -name '*.png' -printf "'%p' '%h/io.github.slgobinath.SafeEyes.%f'\n" | xargs -n2 mv
       - install -Dm644 /app/lib/python3.10/site-packages/safeeyes/platform/icons/hicolor/128x128/apps/safeeyes.png /app/share/icons/hicolor/128x128/apps/io.github.slgobinath.SafeEyes.png
       - install -Dm644 /app/lib/python3.10/site-packages/safeeyes/platform/safeeyes.desktop /app/share/applications/io.github.slgobinath.SafeEyes.desktop
       - install -Dm644 io.github.slgobinath.SafeEyes.metainfo.xml /app/share/metainfo/io.github.slgobinath.SafeEyes.metainfo.xml
       - install -Dm744 safeeyes-run.sh /app/bin/safeeyes-run
-      - desktop-file-edit --set-icon=io.github.slgobinath.SafeEyes --set-key=Exec --set-value=safeeyes-run /app/share/applications/io.github.slgobinath.SafeEyes.desktop
+      - desktop-file-edit --set-icon=io.github.slgobinath.SafeEyes --set-key=Exec --set-value=safeeyes-run --set-key=Name --set-value='SafeEyes Testing' /app/share/applications/io.github.slgobinath.SafeEyes.desktop
     sources:
       - type: file
         path: io.github.slgobinath.SafeEyes.metainfo.xml

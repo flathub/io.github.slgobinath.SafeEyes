@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [[ -f "${XDG_CONFIG_HOME}/safeeyes/safeeyes.json" ]]; then
     safeeyes "$@"
 else
