@@ -1,0 +1,70 @@
+{
+    "name": "pypi-dependencies",
+    "buildsystem": "simple",
+    "build-commands": [],
+    "modules": [
+        {
+            "name": "python3-pycairo",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pycairo\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/a2/dd/bc2c9ee9485308a29c18b1241329e677917af25c60b127857f0fb23d0c6e/pycairo-1.24.0.tar.gz",
+                    "sha256": "1444d52f1bb4cc79a4a0c0fe2ccec4bd78ff885ab01ebe1c0f637d8392bcafb6"
+                }
+            ]
+        },
+        {
+            "name": "python3-safeeyes",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"safeeyes\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/df/c4/1088865e0246d7ecf56d819a233ab2b72f7d6ab043965ef327d0731b5434/Babel-2.12.1-py3-none-any.whl",
+                    "sha256": "b4246fb7677d3b98f501a39d43396d3cafdc8eadb045f4a31be01863f655c610"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/44/80/96d6317a15a13a4f80ffa61118dc144a70756135fbc6ace30f9b033f51f7/PyGObject-3.44.1.tar.gz",
+                    "sha256": "665fbe980c91e8b31ad78ed3f66879946948200864002d193f67eccc1d7d5d83"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/f2/91/e5ae454da8200c6eb6cf94ca05d799b51e2cb2cc458a7737aebc0c5a21bb/croniter-1.4.1-py2.py3-none-any.whl",
+                    "sha256": "9595da48af37ea06ec3a9f899738f1b2c1c13da3c38cea606ef7cd03ea421128"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/d6/0f/96b7309212a926c1448366e9ce69b081ea79d63265bde33f11cc9cfc2c07/psutil-5.9.5.tar.gz",
+                    "sha256": "5410638e4df39c54d957fc51ce03048acd8e6d60abc0f5107af51e5fb566eb3c"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/a2/dd/bc2c9ee9485308a29c18b1241329e677917af25c60b127857f0fb23d0c6e/pycairo-1.24.0.tar.gz",
+                    "sha256": "1444d52f1bb4cc79a4a0c0fe2ccec4bd78ff885ab01ebe1c0f637d8392bcafb6"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/36/7a/87837f39d0296e723bb9b62bbb257d0355c7f6128853c78955f57342a56d/python_dateutil-2.8.2-py2.py3-none-any.whl",
+                    "sha256": "961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/fc/b8/ff33610932e0ee81ae7f1269c890f697d56ff74b9f5b2ee5d9b7fa2c5355/python_xlib-0.33-py2.py3-none-any.whl",
+                    "sha256": "c3534038d42e0df2f1392a1b30a15a4ff5fdc2b86cfa94f072bf11b10a164398"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/53/41/100af9261b948b76e903b9e5777242ce61e113389256af3ad31d2bb3e5d9/safeeyes-2.1.6-py3-none-any.whl",
+                    "sha256": "5dcb38e784752b635ced888d705d3c314789b10819706ab7390843670cc1d3b8"
+                }
+            ]
+        }
+    ]
+}
