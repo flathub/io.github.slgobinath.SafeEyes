@@ -12,8 +12,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/69/ca/9e9fa2e8be0876a9bbf046a1be7ee33e61d4fdfbd1fd25c76c1bdfddf8c4/pycairo-1.23.0.tar.gz",
-                    "sha256": "9b61ac818723adc04367301317eb2e814a83522f07bbd1f409af0dada463c44c"
+                    "url": "https://files.pythonhosted.org/packages/a2/dd/bc2c9ee9485308a29c18b1241329e677917af25c60b127857f0fb23d0c6e/pycairo-1.24.0.tar.gz",
+                    "sha256": "1444d52f1bb4cc79a4a0c0fe2ccec4bd78ff885ab01ebe1c0f637d8392bcafb6"
                 }
             ]
         },
@@ -36,8 +36,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e7/f4/afbf09131612dad1737c8f9b0f4f494153f4099e114904bd6b94036e588f/croniter-1.3.14-py2.py3-none-any.whl",
-                    "sha256": "da1a1a7ca977b38e952ab0a119576e002bc4c05d058d644e81fc06ef7e995bb0"
+                    "url": "https://files.pythonhosted.org/packages/f2/91/e5ae454da8200c6eb6cf94ca05d799b51e2cb2cc458a7737aebc0c5a21bb/croniter-1.4.1-py2.py3-none-any.whl",
+                    "sha256": "9595da48af37ea06ec3a9f899738f1b2c1c13da3c38cea606ef7cd03ea421128"
                 },
                 {
                     "type": "file",
@@ -46,8 +46,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/69/ca/9e9fa2e8be0876a9bbf046a1be7ee33e61d4fdfbd1fd25c76c1bdfddf8c4/pycairo-1.23.0.tar.gz",
-                    "sha256": "9b61ac818723adc04367301317eb2e814a83522f07bbd1f409af0dada463c44c"
+                    "url": "https://files.pythonhosted.org/packages/a2/dd/bc2c9ee9485308a29c18b1241329e677917af25c60b127857f0fb23d0c6e/pycairo-1.24.0.tar.gz",
+                    "sha256": "1444d52f1bb4cc79a4a0c0fe2ccec4bd78ff885ab01ebe1c0f637d8392bcafb6"
                 },
                 {
                     "type": "file",
@@ -61,8 +61,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/84/f5/9a65a3d58b8db6c632646f997c7e461f4ae4bea5b7881791ca00dff5f8a5/safeeyes-2.1.5-py3-none-any.whl",
-                    "sha256": "0197527bf8f9da2937f6cd164a082c65d4faba583a6b20717e5d7235e3c2ffcf"
+                    "url": "https://files.pythonhosted.org/packages/53/41/100af9261b948b76e903b9e5777242ce61e113389256af3ad31d2bb3e5d9/safeeyes-2.1.6-py3-none-any.whl",
+                    "sha256": "5dcb38e784752b635ced888d705d3c314789b10819706ab7390843670cc1d3b8"
                 }
             ]
         }
