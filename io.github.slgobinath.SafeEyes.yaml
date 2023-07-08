@@ -2,7 +2,7 @@ id: io.github.slgobinath.SafeEyes
 sdk: org.freedesktop.Sdk
 runtime: org.freedesktop.Platform
 runtime-version: "22.08"
-command: safeeyes-run
+command: safeeyes
 
 finish-args:
   - "--share=ipc"
@@ -51,14 +51,5 @@ modules:
     buildsystem: simple
     build-commands:
       - cp -r /app/lib/python3.10/site-packages/safeeyes/platform/icons/ /app/share/icons/
-      # - find /app/share/icons -name '*.png' -printf "'%p' '%h/io.github.slgobinath.SafeEyes.%f'\n" | xargs -n2 mv
-      - install -Dm644 /app/lib/python3.10/site-packages/safeeyes/platform/icons/hicolor/128x128/apps/safeeyes.png /app/share/icons/hicolor/128x128/apps/io.github.slgobinath.SafeEyes.png
-      - install -Dm644 /app/lib/python3.10/site-packages/safeeyes/platform/safeeyes.desktop /app/share/applications/io.github.slgobinath.SafeEyes.desktop
-      - install -Dm644 io.github.slgobinath.SafeEyes.metainfo.xml /app/share/metainfo/io.github.slgobinath.SafeEyes.metainfo.xml
-      - install -Dm744 safeeyes-run.sh /app/bin/safeeyes-run
-      - desktop-file-edit --set-icon=io.github.slgobinath.SafeEyes --set-key=Exec --set-value=safeeyes-run --set-key=Name --set-value='SafeEyes Testing' /app/share/applications/io.github.slgobinath.SafeEyes.desktop
-    sources:
-      - type: file
-        path: io.github.slgobinath.SafeEyes.metainfo.xml
-      - type: file
-        path: safeeyes-run.sh
+      - install -Dm644 /app/lib/python3.10/site-packages/safeeyes/platform/io.github.slgobinath.SafeEyes.desktop /app/share/applications/io.github.slgobinath.SafeEyes.desktop
+      - install -Dm644 /app/lib/python3.10/site-packages/safeeyes/platform/io.github.slgobinath.SafeEyes.metainfo.xml /app/share/metainfo/io.github.slgobinath.SafeEyes.metainfo.xml
