@@ -53,3 +53,4 @@ modules:
       - cp -r /app/lib/python3.10/site-packages/safeeyes/platform/icons/ /app/share/icons/
       - install -Dm644 /app/lib/python3.10/site-packages/safeeyes/platform/io.github.slgobinath.SafeEyes.desktop /app/share/applications/io.github.slgobinath.SafeEyes.desktop
       - install -Dm644 /app/lib/python3.10/site-packages/safeeyes/platform/io.github.slgobinath.SafeEyes.metainfo.xml /app/share/metainfo/io.github.slgobinath.SafeEyes.metainfo.xml
+      - desktop-file-edit --set-key=Exec --set-value=safeeyes /app/share/applications/io.github.slgobinath.SafeEyes.desktop
