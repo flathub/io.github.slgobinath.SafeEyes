@@ -46,6 +46,7 @@ modules:
   - modules/alsa-utils.yml # required for 'audible alert' plugin
   - modules/libnotify.yml # notification support
   - modules/xprintidle.yml # idle detection other than gnome
+  - modules/swayidle.yml # idle detection for wayland protocol ext-idle-notify-v1
 
   - name: safeeyes
     buildsystem: simple
