@@ -19,7 +19,7 @@ finish-args:
   - "--talk-name=org.ayatana.indicator.application"
   - "--talk-name=org.gnome.Mutter.IdleMonitor"
   - "--talk-name=org.kde.StatusNotifierWatcher"
-  - "--system-talk-name=org.freedesktop.login1" # for swayidle
+  - "--socket=system-bus" # for swayidle, needed because of https://github.com/flatpak/xdg-dbus-proxy/issues/21
 
 cleanup:
   - /cache
