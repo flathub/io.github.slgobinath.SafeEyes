@@ -19,6 +19,7 @@ finish-args:
   - "--talk-name=org.ayatana.indicator.application"
   - "--talk-name=org.gnome.Mutter.IdleMonitor"
   - "--talk-name=org.kde.StatusNotifierWatcher"
+  - "--socket=system-bus" # for swayidle, needed because of https://github.com/flatpak/xdg-dbus-proxy/issues/21
 
 cleanup:
   - /cache
@@ -46,6 +47,7 @@ modules:
   - modules/alsa-utils.yml # required for 'audible alert' plugin
   - modules/libnotify.yml # notification support
   - modules/xprintidle.yml # idle detection other than gnome
+  - modules/swayidle.yml # idle detection for wayland protocol ext-idle-notify-v1
 
   - name: safeeyes
     buildsystem: simple
