@@ -10,7 +10,6 @@ finish-args:
   - "--socket=wayland"
   - "--socket=pulseaudio"
   - "--device=dri"
-  - "--filesystem=xdg-config/gtk-3.0:ro" # system theme integration
   - "--system-talk-name=org.freedesktop.StatusNotifierItem.Menu" # for tray icon
   - "--talk-name=org.mpris.MediaPlayer2.*" # to be able to pause media player on break
   # various DE support
