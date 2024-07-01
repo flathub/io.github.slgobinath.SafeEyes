@@ -4,8 +4,8 @@ config-opts:
   - --with-udev-rules-dir=/app/null
 sources:
   - type: archive
-    url: https://www.alsa-project.org/files/pub/utils/alsa-utils-1.2.10.tar.bz2
-    sha256: 104b62ec7f02a7ce16ca779f4815616df1cc21933503783a9107b5944f83063a
+    url: https://www.alsa-project.org/files/pub/utils/alsa-utils-1.2.12.tar.bz2
+    sha256: 98bc6677d0c0074006679051822324a0ab0879aea558a8f68b511780d30cd924
     x-checker-data:
       project-id: 37
       type: anitya
