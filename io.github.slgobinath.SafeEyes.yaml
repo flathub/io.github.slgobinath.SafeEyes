@@ -50,5 +50,8 @@ modules:
     build-commands:
       - cp -r /app/lib/python3.11/site-packages/safeeyes/platform/icons/ /app/share/icons/
       - install -Dm644 /app/lib/python3.11/site-packages/safeeyes/platform/io.github.slgobinath.SafeEyes.desktop /app/share/applications/io.github.slgobinath.SafeEyes.desktop
-      - install -Dm644 /app/lib/python3.11/site-packages/safeeyes/platform/io.github.slgobinath.SafeEyes.metainfo.xml /app/share/metainfo/io.github.slgobinath.SafeEyes.metainfo.xml
+      - install -Dm644 io.github.slgobinath.SafeEyes.metainfo.xml /app/share/metainfo/io.github.slgobinath.SafeEyes.metainfo.xml
       - desktop-file-edit --set-key=Exec --set-value=safeeyes /app/share/applications/io.github.slgobinath.SafeEyes.desktop
+    sources:
+      - type: file
+        path: io.github.slgobinath.SafeEyes.metainfo.xml
