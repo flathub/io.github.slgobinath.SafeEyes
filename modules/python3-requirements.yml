@@ -105,8 +105,8 @@ modules:
         --prefix=${FLATPAK_DEST} "PyGObject" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/f9/9e/6bab1ed3bd878f0912d9a0600c21f3d88bab0e8a8d4c3ce50f5cf336faaf/pygobject-3.48.2.tar.gz
-        sha256: c3c0a7afbe5b2c1c64dc0530109b4dd571085153dbedfbccb8ec7c5ad233f977
+        url: https://files.pythonhosted.org/packages/2b/58/d34e67a79631177e3c08e7d02b5165147f590171f2cae6769502af5f7f7e/pygobject-3.50.0.tar.gz
+        sha256: 4500ad3dbf331773d8dedf7212544c999a76fc96b63a91b3dcac1e5925a1d103
         x-checker-data:
           name: pygobject
           type: pypi
