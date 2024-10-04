@@ -1,7 +1,7 @@
 # To create this file use 'requires' in setup to generate requirements.txt file -> https://github.com/slgobinath/SafeEyes/blob/13bf3e8f0226b58497f9184ddc42dbdaa4a5f14b/setup.py#L6
-# do not add dbus-python and add --no-deps for safeeyes package
+# add --no-deps for safeeyes package
 # order would be:
-#        meson-python -> pycairo -> other dependencies excluding dbus-python -> safeeyes (--no-deps)
+#        meson-python -> pycairo -> other dependencies -> safeeyes (--no-deps)
 #        * remember to remove repeating packages for cleaner view
 # Generated with flatpak-pip-generator --yaml --checker-data --requirements-file=requirements.txt --output python3-requirements --runtime=org.freedesktop.Sdk//23.08
 build-commands: []
