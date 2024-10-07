@@ -33,9 +33,6 @@ cleanup:
   - /lib/*.la
 
 modules:
-  - shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json # app indicator support
-  - shared-modules/libappindicator/libappindicator-gtk3-12.10.json
-
   # alsa-utils, libnotify, xprop -> anitya configured.
   # wlrctl, xprintidle -> manual checks
   - modules/python3-requirements.yml # auto generated pip dependencies for safeeyes
