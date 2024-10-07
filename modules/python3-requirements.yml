@@ -4,7 +4,7 @@
 #        dependencies -> safeeyes (--no-deps)
 #        * remember to remove repeating packages for cleaner view
 #        * remove runtime-provided packages like PyGObject and packaging
-# Generated with flatpak-pip-generator --yaml --checker-data --requirements-file=requirements.txt --output python3-requirements --runtime=org.freedesktop.Sdk//24.08
+# Generated with flatpak-pip-generator --yaml --checker-data --requirements-file=requirements.txt --output python3-requirements --runtime=org.gnome.Sdk//47
 build-commands: []
 buildsystem: simple
 modules:
