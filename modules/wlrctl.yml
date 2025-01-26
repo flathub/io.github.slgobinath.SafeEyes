@@ -1,8 +1,12 @@
 name: wlrctl
 buildsystem: meson
 sources:
-  - type: archive
-    url: "https://git.sr.ht/~brocellous/wlrctl/archive/v0.2.2.tar.gz"
-    sha256: b5b3836091c41de09a832df1e5eb4747841d7ae670367e413487d5be7a5f2849
-only-arches:
-  - x86_64
+  - type: git
+    url: "https://git.sr.ht/~brocellous/wlrctl"
+    commit: 3986d4e4d9075be3418043a8e053d7531f22558f # until new tag
+    # tag: v0.2.2
+    # x-checker-data:
+    #   type: git
+    #   tag-pattern: "^v([\\d.]+)$"
+# only-arches: # can be deleted after new tag
+#   - x86_64
