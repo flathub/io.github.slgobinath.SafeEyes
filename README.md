@@ -27,6 +27,7 @@ git clone --recursive https://github.com/flathub/io.github.slgobinath.SafeEyes &
 # install flatpak and flatpak-builder then add flathub
 sudo apt install flatpak flatpak-builder && flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 # install flatpak runtime
+flatpak install -y org.freedesktop.Platform/x86_64/24.08
 flatpak install -y org.freedesktop.Sdk/x86_64/24.08
 # build
 flatpak-builder --user --install --force-clean build-dir io.github.slgobinath.SafeEyes.yaml
