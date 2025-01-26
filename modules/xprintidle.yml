@@ -1,6 +1,9 @@
 name: xprintidle
 buildsystem: meson
 sources:
-  - type: archive
-    url: "https://github.com/g0hl1n/xprintidle/archive/0.2.5.tar.gz"
-    sha256: 1c0349e555fe310284c82e8ca3c43318e09cea0874552aadadc33a14d5946232
+  - type: git
+    url: "https://github.com/g0hl1n/xprintidle"
+    tag: "0.3.0"
+    x-checker-data:
+      type: git
+      tag-pattern: "^([\\d.]+)$"
