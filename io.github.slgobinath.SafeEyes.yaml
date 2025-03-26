@@ -19,7 +19,7 @@ finish-args:
   - "--talk-name=org.gnome.Mutter.IdleMonitor"
   - "--talk-name=org.kde.StatusNotifierWatcher"
   - "--talk-name=org.gnome.SessionManager"
-  - "--system-talk-name=org.freedesktop.login1" # for swayidle
+  - "--system-talk-name=org.freedesktop.login1" # for swayidle and detecting system suspend
 
 cleanup:
   - /cache
