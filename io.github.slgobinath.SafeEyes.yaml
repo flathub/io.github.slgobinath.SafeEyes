@@ -10,15 +10,11 @@ finish-args:
   - "--socket=wayland"
   - "--socket=pulseaudio"
   - "--device=dri"
-  - "--system-talk-name=org.freedesktop.StatusNotifierItem.Menu" # for tray icon
   - "--talk-name=org.mpris.MediaPlayer2.*" # to be able to pause media player on break
   # various DE support
-  - "--talk-name=com.canonical.indicator.application"
-  - "--talk-name=com.canonical.AppMenu.Registrar"
-  - "--talk-name=org.ayatana.indicator.application"
-  - "--talk-name=org.gnome.Mutter.IdleMonitor"
-  - "--talk-name=org.kde.StatusNotifierWatcher"
-  - "--talk-name=org.gnome.SessionManager"
+  - "--talk-name=org.gnome.Mutter.IdleMonitor" # smartpause (gnome)
+  - "--talk-name=org.kde.StatusNotifierWatcher" # trayicon (all desktops)
+  - "--talk-name=org.gnome.SessionManager" # donotdisturb (gnome)
   - "--talk-name=org.gnome.ScreenSaver" # for screensaver plugin (gnome)
   - "--talk-name=org.freedesktop.ScreenSaver" # for screensaver plugin (kde)
   - "--system-talk-name=org.freedesktop.login1" # for swayidle and detecting system suspend
