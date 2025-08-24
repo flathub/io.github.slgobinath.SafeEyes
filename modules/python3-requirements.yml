@@ -3,8 +3,7 @@
 # order would be:
 #        dependencies -> safeeyes (--no-deps)
 #        * remember to remove repeating packages for cleaner view
-#        * remove runtime-provided packages like PyGObject and packaging
-# Generated with flatpak-pip-generator --yaml --checker-data --pyproject-file=pyproject.toml --output python3-requirements --runtime=org.gnome.Sdk//48
+# Generated with flatpak-pip-generator --yaml --checker-data --pyproject-file=pyproject.toml --output python3-requirements --ignore-pkg PyGObject --runtime=org.gnome.Sdk//49
 build-commands: []
 buildsystem: simple
 modules:
@@ -48,6 +47,14 @@ modules:
           name: pytz
           packagetype: bdist_wheel
           type: pypi
+      - &id001
+        type: file
+        url: https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl
+        sha256: 4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274
+        x-checker-data:
+          name: six
+          packagetype: bdist_wheel
+          type: pypi
   - name: python3-python-xlib
     buildsystem: simple
     build-commands:
@@ -61,6 +68,7 @@ modules:
           name: python_xlib
           packagetype: bdist_wheel
           type: pypi
+      - *id001
   - name: python3-cffi
     buildsystem: simple
     build-commands:
