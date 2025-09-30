@@ -1,5 +1,7 @@
 name: swayidle
 buildsystem: meson
+config-opts:
+  - -Dbash-completions=false
 sources:
   - type: archive
     url: "https://github.com/swaywm/swayidle/releases/download/1.8.0/swayidle-1.8.0.tar.gz"
