@@ -14,6 +14,7 @@ finish-args:
   # various DE support
   - "--talk-name=org.gnome.Mutter.IdleMonitor" # smartpause (gnome)
   - "--talk-name=org.kde.StatusNotifierWatcher" # trayicon (all desktops)
+  - "--talk-name=org.freedesktop.Notifications" # donotdisturb (kde)
   - "--talk-name=org.gnome.SessionManager" # donotdisturb (gnome)
   - "--talk-name=org.gnome.ScreenSaver" # for screensaver plugin (gnome)
   - "--talk-name=org.freedesktop.ScreenSaver" # for screensaver plugin (kde)
