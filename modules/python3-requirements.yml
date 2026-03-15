@@ -27,8 +27,8 @@ modules:
         --prefix=${FLATPAK_DEST} "croniter" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/b4/09/b9c326f46320f2ed7245d186352778b163f81359bbd483733a855b8999d9/croniter-6.2.1-py3-none-any.whl
-        sha256: bcb02cfae0c6732efe40f5c2067c1448808d6ecc1d07018ed0825ae9545f44c6
+        url: https://files.pythonhosted.org/packages/d0/39/783980e78cb92c2d7bdb1fc7dbc86e94ccc6d58224d76a7f1f51b6c51e30/croniter-6.2.2-py3-none-any.whl
+        sha256: a5d17b1060974d36251ea4faf388233eca8acf0d09cbd92d35f4c4ac8f279960
         x-checker-data:
           name: croniter
           packagetype: bdist_wheel
