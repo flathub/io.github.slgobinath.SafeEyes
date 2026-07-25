@@ -41,8 +41,8 @@ modules:
           packagetype: bdist_wheel
           type: pypi
       - type: file
-        url: https://files.pythonhosted.org/packages/ec/dd/96da98f892250475bdf2328112d7468abdd4acc7b902b6af23f4ed958ea0/pytz-2026.2-py2.py3-none-any.whl
-        sha256: 04156e608bee23d3792fd45c94ae47fae1036688e75032eea2e3bf0323d1f126
+        url: https://files.pythonhosted.org/packages/c4/f5/6d4e606d0a64730dfb99e2096bfc443792716d630385863f9ec38d56338a/pytz-2026.3-py2.py3-none-any.whl
+        sha256: f2c90c10a28a593365fe42a654c5a4dc20bc48ad13451735db1c9adb94e039be
         x-checker-data:
           name: pytz
           packagetype: bdist_wheel
