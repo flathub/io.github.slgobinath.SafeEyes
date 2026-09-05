@@ -107,8 +107,8 @@ modules:
         --prefix=${FLATPAK_DEST} "safeeyes" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/29/98/0252d8bab3761cf682f903f1bde6e517450b98f7df6346e839924696e506/safeeyes-3.5.0-py3-none-any.whl
-        sha256: 786737fc4aee3165ab36e0bf34cb36a67e6080a116cf9ffa3084cdd9f97d00fc
+        url: https://files.pythonhosted.org/packages/ea/1c/b708496b4b900362463f70500b815c5e0f69cb0ab03e068231e2f7ef09ff/safeeyes-3.5.1-py3-none-any.whl
+        sha256: d190d8596064b55dbb63bd2b4a441a1da46bf575810a01b54dff354e68c015ad
         x-checker-data:
           name: safeeyes
           packagetype: bdist_wheel
