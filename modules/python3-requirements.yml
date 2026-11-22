@@ -120,4 +120,5 @@ modules:
           name: safeeyes
           packagetype: bdist_wheel
           type: pypi
+          is-important: true
 name: python3-requirements
