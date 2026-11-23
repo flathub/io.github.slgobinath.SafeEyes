@@ -4,5 +4,10 @@ config-opts:
   - -Dbash-completions=false
 sources:
   - type: archive
-    url: "https://github.com/swaywm/swayidle/releases/download/1.8.0/swayidle-1.8.0.tar.gz"
-    sha256: 16b3e76a117f2f0ff2ee5fbebf38849595cdd705db1cd5f6aceaed00d71b3aa1
+    url: "https://github.com/swaywm/swayidle/releases/download/v1.9.1/swayidle-1.9.1.tar.gz"
+    sha256: 6e1655ecba30db14de3df1652ef9dd1db72784946fa65cb222404a87ac825d57
+    x-checker-data:
+      type: github
+      repo: swaywm/swayidle
+      tag-pattern: '^v?([0-9.]+)$'
+      asset-name: 'swayidle-${version}.tar.gz'
